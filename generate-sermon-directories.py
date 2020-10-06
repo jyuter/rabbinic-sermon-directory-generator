@@ -113,7 +113,8 @@ def format_directory_name (count, name):
 
 if __name__ == "__main__":
     if (len(sys.argv) !=2):
-        print(f'\nUsage is: generate-sermon-directories.py <root-directory>')
-        print(f'If <root-directory> path contains a space, it must be placed in quotes \"\"\n')
+        print('\nUsage is: generate-sermon-directories.py <root-directory>')
+        print('If <root-directory> path contains a space, it must be placed in quotes \"\"\n')
+        print('Reccomdation: Use a root directory under a cloud service (Dropbox, Google Drive, etc) to automatically back up to the cloud')
         sys.exit(0)
     main(sys.argv[1:])
