@@ -24,9 +24,6 @@ def main (argv):
 
 def init_root_directory(argv):
     global ROOT_DIRECTORY
-    if (len(argv) > 1):
-        print(f'If <root-directory> path contains a space, it must be placed in quotes \"\"')
-        sys.exit(0)
     input_dir = argv[0]
     if (not input_dir.endswith("\\")):
         input_dir += "\\"        
@@ -115,4 +112,8 @@ def format_directory_name (count, name):
     return prefix + " - " + name
 
 if __name__ == "__main__":
+    if (len(sys.argv) !=2):
+        print(f'\nUsage is: generate-sermon-directories.py <root-directory>')
+        print(f'If <root-directory> path contains a space, it must be placed in quotes \"\"\n')
+        sys.exit(0)
     main(sys.argv[1:])
